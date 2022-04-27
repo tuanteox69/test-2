@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Draw a Rectangle</h2>
+<canvas id="myCanvas" width="400" height="300" style="background-color: grey"></canvas>
+<script>
+    let $ = document.getElementById.bind(document)
+
+    class Rectangle {
+        x
+        y
+        length
+        width
+        constructor(x, y, length, width) {
+            this.x = x;
+            this.y = y;
+            this.length = length;
+            this.width = width;
+        }
+        render(draw, color) {
+            let ctx = $('myCanvas').getContext('2d');
+            ctx.beginPath();
+            ctx.lineWidth = "5";
+            ctx.strokeStyle = color;
+            ctx.rect(draw.x, draw.y, draw.length, draw.width)
+            ctx.stroke();
+        }
+    }
+    let rectangle = new Rectangle(10, 10, 200, 100);
+    rectangle.render(rectangle, "#000000")
+
+</script>
+</body>
+</html>

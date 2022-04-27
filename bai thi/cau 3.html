@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("Nhập chuỗi 1:");
+    let str2 = prompt("Nhập chuỗi 2: ");
+    function check(a,b) {
+        let check = false;
+        for (let i = 0; i <b.length; i++) {
+            if (b.indexOf(a) !==-1){
+                check = true;
+                break;
+            }
+        }
+        if (check){
+            alert(true)
+        } else {
+           alert(false)
+        }
+    }
+    check(str1,str2)
+</script>
+</body>
+</html>

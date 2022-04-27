@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐỀ THI THỰC HÀNH</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhập điểm thi: (cách nhau bằng đấu cách)").split(" ");
+    function max3(a){
+        let max = 0
+        let max1 = 0
+        let max2 = 0
+        for (let i = 0; i < a.length; i++) {
+            if (max <= a[i]) {
+                max = a[i]
+            }
+        }
+
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] !== max) {
+                if (max1 <= a[i]) {
+                    max1 = a[i]
+                }
+            }
+        }
+
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] !== max && a[i] !== max1) {
+                if (max2 <= a[i]) {
+                    max2 = a[i]
+                }
+            }
+        }
+        document.write('trong danh sach diem thi: '+ a + ' thi diem lon thu 3 la: ' + max2)
+    }
+max3(arr)
+</script>
+</body>
+</html>
